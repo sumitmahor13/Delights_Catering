@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: "Lexend", sans-serif;
+}
+
+.greatVibes {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* laoder */
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 50px;
+    padding: 8px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #25b09b;
+    --_m: 
+      conic-gradient(#0000 10%,#000),
+      linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+            mask: var(--_m);
+    -webkit-mask-composite: source-out;
+            mask-composite: subtract;
+    animation: l3 1s infinite linear;
+  }
+  @keyframes l3 {to{transform: rotate(1turn)}}
+
+  /* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+        scrollbar-width: auto;
+        scrollbar-color: #afb2bf;
+      }
+      
+      /* Chrome, Edge, and Safari */
+      *::-webkit-scrollbar {
+        width: 3px;
+      }
+      
+      *::-webkit-scrollbar-track {
+        background: #000814;
+      }
+      
+      *::-webkit-scrollbar-thumb {
+        background-color: #afb2bf;
+        border-radius: 10px;
+        visibility: hidden;
+      }
+      
+      *:active::-webkit-scrollbar-thumb,
+      *:focus::-webkit-scrollbar-thumb,
+      *:hover::-webkit-scrollbar-thumb {
+        visibility: visible;
+      }
+      
+      /* Hide default styling of details/summary */
+      details > summary {
+        list-style: none;
+      }
+      details > summary::-webkit-details-marker {
+        display: none;
+      }
+      
+  .active{
+        color: green;
+        border-bottom: 2px solid green;
+  }
+
+  .shadow{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+
+  .card-shadow{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  }
+
+  .image-shadow{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+.modalbg{
+  background-image: url('../public/Assets/TestimonialFrame.jpg');
+  height: 100vh;
+}
+.testimonialbg{
+  background-image: url('../public/Assets/TestimonialFrame.jpg');
+}
+.loginbg{
+  background-image: url('../public/Assets/Login.jpg');
+}
+.signupbg{
+  background-image: url('../public/Assets/SignUp.jpg');
+}
